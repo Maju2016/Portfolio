@@ -407,6 +407,30 @@ footer{
     color: var(--white);
 }
 
+/* SUCESS */
+.sucess_icon{
+    width: 50%;
+    border: 0.35rem solid var(--purple-500);
+    border-radius: 50%;
+    /* 50% deixa redondo */
+    box-shadow: var(--shadow-lg);
+}
+
+.sucess_container{
+    margin: 4rem auto;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--gray-200);
+    border-radius: 1rem;
+}
+
+.sucess_content{
+    margin: auto;
+    line-height: 2.5rem;
+}
+
 /* RESPONSIVIDADE */
 
 /* SMARTPHONES(até 490px */
@@ -479,7 +503,6 @@ footer{
         font-size: 0.9rem;
         padding: 0.5rem 1.25rem;
     }
-
 
 
 }
