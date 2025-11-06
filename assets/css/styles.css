@@ -1,69 +1,67 @@
-/*Reset do Navegador */
+/* Reset do Navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    /*tira a borda em volta do elemento*/
     font-family: 'Poppins', sans-serif;
 }
- 
+
 /* === VARIÁVEIS === */
 :root {
     /* Cores */
-    --purple-50: #f4eaff;
-    --purple-100: #e9dcfa;
-    --purple-200: #cdb3f0;
-    --purple-300: #b186e5;
-    --purple-400: #9460db;
-    --purple-500: #6b36c8;
-    --purple-600: #5b2ca0;
-    --purple-700: #4c2177;
-    --purple-800: #441f88;
-    --purple-900: #2a0e4d;
+    --purple-50:  #f4eaff; 
+    --purple-100: #e9dcfa; 
+    --purple-200: #cdb3f0; 
+    --purple-300: #b186e5; 
+    --purple-400: #9460db; 
+    --purple-500: #6b36c8; 
+    --purple-600: #5b2ca0; 
+    --purple-700: #4c2177; 
+    --purple-800: #441f88; 
+    --purple-900: #2a0e4d; 
     --gray-100: #f5f5f5;
     --gray-200: #e8e8e8;
     --gray-400: #505861;
     --black-800: #171717;
     --white: #ffffff;
     --error: #e63946;
- 
+
     /* Sombras */
     --shadow-sm: 0 0.25rem 0.5rem #0000000D;
     --shadow-md: 0 0.25rem 0.75rem #6B36C84D;
     --shadow-lg: 0 0.5rem 1.5rem #6B36C833;
     --shadow-focus: 0 0 0 0.25rem #6B36C81A;
 }
- 
-html {
+
+/* === ESTILOS GLOBAIS === */
+
+html{
     scroll-behavior: smooth;
-    /*deixa a rolagem macia*/
 }
- 
-body {
+
+body{
     display: flex;
-    /*é o container flexivel tudo um do lado do outro*/
     flex-direction: column;
-    /*alinha os itens na vertical*/
     min-height: 100vh;
     background-color: var(--white);
-    color: var(--black-800);
+    color: var(--black-800)
 }
- 
-main {
+
+main{
     flex: 1;
- 
 }
- 
+
 a,
-button {
+button{
     cursor: pointer;
 }
- 
-/* Botões */
+
+/* === BOTÕES === */
+
 .botao,
-.botao-outline {
+.botao-outline{
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -71,41 +69,36 @@ button {
     text-align: center;
     transition: all 0.3s ease;
 }
- 
-.botao {
-    background-color: var(--purple-500);
-    color: var(--white);
+
+.botao{
     border: none;
-    /*-shadow: var(--shadow-sm);*/
+    color: var(--white);
+    background-color: var(--purple-500);
 }
- 
+
 .botao:hover {
     background-color: var(--purple-800);
-    -shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md);
     transform: translateY(-0.25rem);
-    /*faz o botão subir um pouco*/
 }
- 
-.botao-outline {
+
+.botao-outline{
     border: 0.25rem solid var(--purple-500);
     color: var(--purple-500);
     background-color: transparent;
 }
- 
+
 .botao-outline:hover {
-    color: var(--white);
     background-color: var(--purple-500);
+    color: var(--white);
     box-shadow: var(--shadow-md);
     transform: translateY(-0.25rem);
-    /*faz o botão subir um pouco*/
 }
- 
- 
-/* Menu */
- 
-.menu_container {
+
+/* === MENU === */
+
+.menu_container{
     position: sticky;
-    /*efeito que deixa ele em cima e as coisas passarem por baixo*/
     top: 0;
     width: 100%;
     height: 5rem;
@@ -113,47 +106,55 @@ button {
     border-bottom: 0.5rem solid var(--gray-200);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
-    /*garante que o menu fique acima de outros elementos*/
 }
- 
-.menu_content {
+
+.menu_content{
     display: flex;
     justify-content: space-between;
-    /*joga um pro lado e outro pro outro com espaço entre eles*/
     align-items: center;
     width: 70rem;
     height: 100%;
     padding: 0 1.5rem;
     margin: 0 auto;
-    /*centraliza o menu*/
 }
- 
-.menu_container a {
-    color: var(--white);
+
+.menu_container a{
     font-weight: 600;
+    color: var(--white);
     transition: color 0.3s ease;
 }
- 
-.menu_container a:hover {
+
+.menu_container a:hover{
     color: var(--purple-200);
 }
- 
-#titulo a {
+
+#titulo a{
     font-size: 1.5rem;
     font-weight: 700;
 }
- 
-.menu_list {
+
+.menu_list{
     display: flex;
     list-style: none;
     gap: 2rem;
 }
- 
-.menu_list a {
+
+.menu_list a{
     padding: 0.5rem;
 }
- 
-/* Seção HERO */
+
+/* === SEÇÕES - ESTILOS COMUNS === */
+
+.hero_container,
+.about_container,
+.contact_container{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    scroll-margin-top: 6rem;
+}
+
+/* === HERO === */
 .hero_container {
     min-height: calc(100vh - 5rem);
     display: flex;
@@ -161,70 +162,70 @@ button {
     gap: 4rem;
 }
 
-.hero_content{
+.hero_content {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.hero_content h4{
+.hero_content h4 {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--purple-500);
 }
 
-.hero_content h1{
+.hero_content h1 {
     font-size: 3rem;
     font-weight: 700;
     line-height: 3.5rem;
     color: var(--black-800);
 }
 
-.hero_content p{
+.hero_content p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     color: var(--gray-400);
 }
 
-.hero_buttons{
+.hero_buttons {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.hero_image{
+.hero_image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ilustracao{
+.ilustracao {
     width: 100%;
     max-width: 100%;
     border-radius: 2rem;
 }
 
-/* ANIMAÇÃO IMAGEM HERO */
-@keyframes float{
+/* === ANIMAÇÃO - IMAGEM HERO === */
+@keyframes float {
 
     0%,
-    100%{
+    100% {
         transform: translateY(0);
     }
 
-    50%{
+    50% {
         transform: translateY(-1.25rem);
     }
 }
 
-.float-animation{
+.float-animation {
     animation: float 3s ease-in-out infinite;
-} 
+}
 
-/* SEÇÃO ABOUT */
-.about_container{
+/* === ABOUT === */
+.about_container {
     margin: 4rem auto;
     display: flex;
     align-items: center;
@@ -233,79 +234,71 @@ button {
     border-radius: 1rem;
 }
 
-.about_image{
+.about_image {
     flex: 0 0 17.5rem;
 }
 
-.about_image img{
+.about_image img {
     width: 100%;
     border: 0.35rem solid var(--purple-500);
     border-radius: 50%;
-    /* 50% deixa redondo */
     box-shadow: var(--shadow-lg);
 }
 
-.about_content h2{
+.about_content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: var(--purple-800);
 }
 
-.about_content p{
+.about_content p {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    text-align: justify;
     color: var(--gray-400);
     margin-bottom: 1rem;
 }
 
-.about_stats{
+.about_stats {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
     align-items: center;
 }
 
-.about_stats .botao{
+.about_stats .botao {
     margin-right: auto;
 }
 
-.stat-item{
+.stat-item {
     text-align: center;
 }
 
-.stats-wrapper{
+.stats-wrapper {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.stats-wrapper .stat-number{
+.stats-wrapper .stat-number {
     font-size: 1.5rem;
     font-weight: 700;
+    text-align: center;
     color: var(--purple-500);
     margin-bottom: 0;
 }
 
-.stats-wrapper .stat-label{
-    font-size: 0.8rem;
+.stats-wrapper .stat-label {
+    font-size: 0.75rem;
     color: var(--gray-400);
+    text-align: center;
     margin-bottom: 0;
 }
 
-/* Seções - Estilos Comuns*/
-.hero_container,
-.about_container,
-.contact_container {
-    max-width: 70rem;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-    scroll-margin-top: 6rem;
-}
+/* === CONTACT === */
 
-
-/* CONTATO */
 .contact_container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -343,7 +336,7 @@ button {
 
 .social_icon:hover{
     background-color: var(--purple-600);
-    transform: translateY(0.25rem);
+    transform: translateY(-0.25rem);
     box-shadow: var(--shadow-md);
 }
 
@@ -356,8 +349,9 @@ button {
     filter: brightness(0) invert(100%);
 }
 
-/* FORMULARIO */
-form{
+/* === FORM === */
+
+form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -398,111 +392,317 @@ form span{
     font-weight: 500;
 }
 
-/* FOOTER */
+/* === PÁGINA SUCESS === */
+.sucess_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 12.5rem);
+    padding: 3rem 1.5rem;
+}
+
+.sucess_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 37.5rem;
+}
+
+.sucess_icon {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: var(--purple-500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sucess_icon svg {
+    width: 3.75rem;
+    height: 3.75rem;
+    fill: var(--purple-300);
+}
+
+.sucess_content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--purple-800);
+}
+
+.sucess_content h4 {
+    font-size: 1.25rem;
+    color: var(--gray-400);
+    line-height: 1.875rem;
+}
+
+/* === FOOTER === */
+
 footer{
     padding: 2.5rem;
     font-weight: 600;
     text-align: center;
-    background: linear-gradient(to right top, var(--purple-500), var(--purple-900));
+    background: linear-gradient(to right top, var(--purple-500), var(--purple-800));
     color: var(--white);
+    margin-top: auto;
 }
 
-/* SUCESS */
-.sucess_icon{
-    width: 50%;
-    border: 0.35rem solid var(--purple-500);
-    border-radius: 50%;
-    /* 50% deixa redondo */
-    box-shadow: var(--shadow-lg);
+/* === RESPONSIVIDADE === */
+
+/* === TELAS MÉDIAS - MONITORES E NOTEBOOKS (até 1120px) === */
+@media screen and (max-width: 1120px) {
+    .menu_content,
+    .hero_container,
+    .about_container,
+    .contact_container {
+        max-width: 100%;
+        padding: 3rem 2rem;
+    }
+
+    .menu_content {
+        padding: 0 2rem;
+    }
 }
 
-.sucess_container{
-    margin: 4rem auto;
-    padding: 80px;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    background-color: var(--gray-200);
-    border-radius: 1rem;
-}
+/* TABLETS (até 960px) */
+@media screen and (max-width: 960px) {
+   
+    /* Hero Section */
+    .hero_container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
 
-.sucess_content{
-    margin: auto;
-    line-height: 2.5rem;
-}
+    .hero_content h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
 
-/* RESPONSIVIDADE */
-
-/* SMARTPHONES(até 490px */
-@media screen and (max-width: 490px){
-    .Menu_content{
+    .hero_buttons {
         justify-content: center;
-        padding: 0 1 rem;
+        flex-wrap: wrap;
     }
 
-    .menu_list{
-        display: none;
+    /* About Section */
+    .about_container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
     }
 
-    #titulo a{
-        font-size: 1.25rem;
+    .about_container h2 {
         text-align: center;
     }
 
-    /* HERO */
-    .hero_container{
-        flex-direction: column-reverse;
+    .about_image {
+        flex: 0 0 auto;
+    }
+
+    .about_image img {
+        max-width: 15rem;
+        margin: 0 auto;
+    }
+
+    /* About Stats */
+    .about_stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .about_stats .botao {
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+
+    /* Wrapper para manter os stats lado a lado */
+    .stats-wrapper {
+        display: flex;
         gap: 2rem;
+        justify-content: center;
+    }
+
+    .stat-item {
+        flex: 0 0 auto;
+    }
+
+    /* Contact Section */
+    .contact_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .contact_info {
+        text-align: center;
+    }
+
+    .social_container {
+        justify-content: center;
+    }
+}
+
+/* SMARTPHONES (até 480px) */
+@media screen and (max-width: 480px) {
+    /* Menu */
+    .menu_content {
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .menu_list {
+        display: none;
+    }
+
+    #titulo a {
+        font-size: 1.25rem;
+    }
+
+    /* Hero Section */
+    .hero_container {
         padding: 1.5rem 1rem;
         min-height: auto;
     }
 
-    .hero_content h4{
+    .hero_content h4 {
         font-size: 1rem;
     }
 
-    .hero_content h1{
+    .hero_content h1 {
         font-size: 2rem;
         line-height: 2.5rem;
     }
 
-    .hero_content p{
+    .hero_content p {
         font-size: 1rem;
         line-height: 1.5rem;
     }
 
-    .hero_buttons{
+    .hero_buttons {
         flex-direction: column;
         width: 100%;
         gap: 0.75rem;
     }
 
-    /* ABOUT */
-    .about_container{
-        flex-direction: column;
-        gap: 2rem;
+    .hero_buttons .botao,
+    .hero_buttons .botao-outline {
+        width: 100%;
     }
 
-    .about_content h2{
+    /* About Section */
+    .about_container {
+        padding: 1.5rem 1rem;
+        margin: 2rem auto;
+    }
+
+    .about_image img {
+        max-width: 12rem;
+    }
+
+    .about_content h2 {
         font-size: 1.75rem;
     }
 
-    .about_content p{
+    .about_content p {
         font-size: 1rem;
         line-height: 1.5rem;
     }
 
-    .about_stats{
-        flex-direction: column;
-        align-items: center;
+    .about_stats {
         gap: 1rem;
     }
 
-    .about_stats .botao{
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 0.5rem 1.25rem;
+    .about_stats .botao {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
     }
 
+    .about_content .stat-item .stat-number {
+        font-size: 1.25rem;
+    }
 
+    .about_content .stat-item .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Contact Section */
+    .contact_container {
+        padding: 1.5rem 1rem;
+        margin: 2rem auto;
+        gap: 2rem;
+    }
+
+    .contact_info h4 {
+        font-size: 1.75rem;
+    }
+
+    .contact_info p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .social_container {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .social_icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.75rem;
+    }
+
+    /* Formulário */
+    form input,
+    form textarea {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    .botao,
+    .botao-outline {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Página de Sucesso */
+    .sucess_container {
+        padding: 2rem 1rem;
+    }
+
+    .sucess_icon {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .sucess_icon svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .sucess_content h1 {
+        font-size: 1.75rem;
+    }
+
+    .sucess_content h4 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.75rem;
+    }
 }
