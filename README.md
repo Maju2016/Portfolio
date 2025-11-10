@@ -55,7 +55,7 @@ Isso abrirá o site em seu navegador padrão, e você poderá visualizar e testa
 
 Este site está disponível publicamente através do **GitHub Pages**. Você pode acessar a versão online pelo link abaixo:
 
-- [Portfólio Pessoal](https://github.com/Maju2016/Portfolio.git)
+- [Portfólio Pessoal](https://maju2016.github.io/Portfolio/)
 
 <br />
 
